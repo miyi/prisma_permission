@@ -1,0 +1,20 @@
+# the name for the service (will be part of the service's HTTP endpoint)
+service: permission-test
+
+# the cluster and stage the service is deployed to
+stage: import2
+
+# to disable authentication:
+# disableAuth: true
+secret: ${env:PRISMA_SECRET}
+
+# the file path pointing to your data model
+datamodel: datamodel.graphql
+
+# uncomment the following two lines to seed your service with initial data
+# seed:
+#   import: seed.graphql
+
+# cluster: ${env:PRISMA_CLUSTER}
+# cluster: local
+cluster: ming-yin/prisma-us1
